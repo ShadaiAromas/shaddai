@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaddai Aromas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Alerta de bienvenida -->
+    <div class="overlay">
+        <div class="alert-box">
+            <h2>Bienvenid@s</h2>
+            <p>¡Gracias por visitarnos!</p>
+            <p>Esto es Shaddai</p>
+            <button class="close-btn" onclick="closeAlert()">Cerrar</button>
+        </div>
+    </div>
+
+
+    <!--TITULO-->
+    <h1 class="titulo">Shaddai</h1>
+
+    <!--ARTICULOS-->
+    <div class="container">
+        
+        <div class="producto">
+            <h2>PEONIAS DE COLORES</h2>
+            <img src="img/001.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Peonias de colores🌈 con aromas de frutos rojos y coco y vainilla')">Descripcion</button>
+            <p class="precio">$2.500</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('PEONIAS', 2.500)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>FLORERO RAYADO</h2>
+            <img src="img/002.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Florero rayado y macetas hexagonal chicas blanco con verde manzana y flores decorativas (las macetas pueden incluir suculentas/cactus o velas aromáticas)')">Descripcion</button>
+            <p class="precio">precio base $6.000</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('FLORERO RAYADO', 6.000)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>BANDEJA OVALA</h2>
+            <img src="img/003.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Bandeja ovalada con macetas con forma de corazón blanco con marrón efecto mármol (solo las macetas o pueden incluir suculentas/cactus o velas aromáticas)')">Descripcion</button>
+            <p class="precio">precio base $4.300</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('BANDEJA OVALADA', 4.300)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>FLORERO RAYADO TEMATICA CORAZONES</h2>
+            <img src="img/004.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Florero rayado temática corazones con flores decorativas y vela con detalle de flores rojas con aroma a frutos rojos')">Descripcion</button>
+            <p class="precio">$11.000</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('FLORERO RAYADO TEMATICA CORAZONES', 11.000)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>FLORERO RAYADO Y MACETA HEXAGONAL</h2>
+            <img src="img/005.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Florero rayado y maceta hexagonal blanco y celeste efecto mármol (solo la maceta o puede incluir suculenta/cactus o velas aromática; el florero puede ir solo o con flores decorativas')">Descripcion</button>
+            <p class="precio">precio base $5.000</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('Florero rayado y maceta hexagonal', 5.000)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>FLORERO NORDICO</h2>
+            <img src="img/006.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Florero nórdico con flores secas, vela aromática de coco y vainilla, bandeja ovalada, difusor con varillas y varilla con flor')">Descripcion</button>
+            <p class="precio">$12.600</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('FLORERO NORDICO', 12.600)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>ESCULTURA DE NIñA CON FLORES</h2>
+            <img src="img/007.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Escultura de niña con flores (se pueden sacar esas flores y usarlo de alajero, ponerle una vela o una planta) vela aromática de suculenta, bandeja ovalada, difusor con varillas y flor')">Descripcion</button>
+            <p class="precio">$11.300</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('ESCULTURA DE NIñA CON FLORES', 11.300)">Comprar
+                por WhatsApp</button>
+        </div>
+
+        <div class="producto">
+            <h2>FLORERO RAYADO CON FLORES</h2>
+            <img src="img/008.jpg" alt="Perfume">
+            <button class="leer-mas"
+                onclick="mostrarDescripcion('Florero rayado con flores, bandeja ovalada,vela aromática en su alajero con aroma a vainilla, difusor con varillas')">Descripcion</button>
+            <p class="precio">$12.100</p>
+            <button class="btn-comprar" onclick="comprarPorWhatsApp('FLORERO RAYADO CON FLORES', 12.100)">Comprar
+                por WhatsApp</button>
+        </div>        
+
+
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="descripcion" class="descripcion">
+        <p id="descripcion-texto"></p>
+    </div>
+
+
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="https://www.instagram.com/shaddaiaromas.r"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+
+                <!--
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+                -->
+            </div>
+            <p class="copyright">Shaddai Aromas © 2025</p>
+        </footer>
+    </div>
+
+
+    <!--ARTICULOS EJEMPLO-->
+    <!--
+<div class="producto">
+<h2>NOMBRE</h2>
+<img src="IMG" alt="Perfume">
+<button class="leer-mas" onclick="mostrarDescripcion('DESCRIPCION')">Descripcion</button>
+<p class="precio">$PRECIO</p>
+<button class="btn-comprar" onclick="comprarPorWhatsApp('NOMBREPRODUCTO', PRECIO)">Comprar por WhatsApp</button>
+</div>
+-->
+
+</body>
+
+</html>
